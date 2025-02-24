@@ -124,15 +124,17 @@ body {
     color: var(--Grey400);
 }
 
-@media (min-width: 1150px) { /* Styles pour les ordinateurs */
+#quote-icon {
+    display: none;
+}
+
+@media (min-width: 1270px) { /* Styles pour les ordinateurs */
     body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr) 20px;
-        height:100vh;
         gap:40px;
         align-items: stretch;
-        height: 100vh;
         padding:10vh 10vw;
         width: 100vw;
     }
@@ -140,7 +142,11 @@ body {
     .purple {
         grid-row: 1;
         grid-column: 1 / 3;
-
+        position: relative;
+        background-image: url('../images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-size: 100px;
+        background-position: top right 70px;
     }
     .grey {
         grid-row: 1;
@@ -164,11 +170,17 @@ body {
         grid-row:3;
         grid-column: 1/5;
     }
+    .container {
+        max-inline-size: none;
+      }
+
+    #quote-icon {
+        display:inline-flex;
+    }
+    
   }
 
-  .container {
-    max-inline-size: none;
-  }
+
 
 
 
